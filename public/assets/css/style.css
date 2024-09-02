@@ -1,0 +1,294 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+:root {
+    --cor-primary: #0489b7;
+    --cor-secundary: #ff7700;
+}
+
+.navbar-nav li a {
+    padding: 0 16px !important;
+    text-transform: uppercase;
+    font-size: .9rem !important;
+    color: var(--cor-primary);
+    font-weight: bold;
+}
+
+.nav-footer li a {
+    color: #ffff;
+    text-transform: uppercase !important;
+    font-size: .9rem !important;
+}
+
+.navbar-nav li:hover a,
+.nav-footer li:hover a {
+    transform: translateY(-7px);
+    transition-duration: .5;
+    color: #ff7700;
+}
+
+#btn-associado a {
+    position: relative !important;
+    cursor: pointer;
+}
+
+#btn-associado a:hover h2 {
+    color: #000;
+    cursor: pointer;
+}
+
+#btn-associado a h2 {
+    position: absolute !important;
+    z-index: 1;
+    top: 140px;
+    right: 180px;
+    color: #fff;
+    font-size: 3.5rem;
+    opacity: 1 !important;
+}
+
+.link-home:hover div {
+    background: linear-gradient(135deg, #ff7700 0%, #ff7700 80%) !important;
+    cursor: pointer;
+    transform: translateY(-4px);
+    transition-duration: .5;
+    max-height: 320px;
+}
+
+.titulo::before {
+    content: '';
+    background-color: #0489b7;
+    width: 10px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 388px;
+    z-index: 0;
+}
+
+.titulo h1::before {
+    content: '';
+    background-color: #0489b7;
+    width: 370px;
+    height: 10px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 0;
+}
+
+#noticias div div div h3 {
+    opacity: 1 !important;
+    background-color: #fff;
+}
+
+.card-servicos img {
+    max-height: 400px !important;
+}
+
+.form-login input::placeholder {
+    color: var(--cor-primary);
+}
+#premios li{
+    margin-bottom: 10px;
+}
+@media(max-width:1300px) {
+    #noticias img {
+        max-width: 250px;
+    }
+
+    #login .container {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
+     #login h3 {
+       display: none;
+    }
+    #login p{
+        display: none !important;
+    }
+    #form-login{
+        width: 400px !important;
+    }
+    #form-login input{
+        width: 100% !important;
+    }
+}
+
+@media(max-width:1200px) {
+    #btn-associado img {
+        max-width: 800px !important;
+    }
+
+    #btn-associado a h2 {
+        top: 130px;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+
+}
+
+@media(max-width:900px) {
+    #btn-associado img {
+        max-width: 500px !important;
+    }
+
+    #btn-associado a h2 {
+        top: 85px;
+        right: 120px;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    #noticias img {
+        max-width: 200px;
+    }
+
+    .titulo-box h1 {
+        right: 30% !important;
+    }
+
+    .card-servicos img {
+        max-height: 300px !important;
+    }
+
+    .titulo h1 {
+        font-size: 2rem !important;
+    }
+    #login img{
+        max-width: 400px;
+    }
+    .banner-home h2 {
+        font-size: 2rem !important;
+    }
+
+    .banner-home h1 {
+        font-size: 3rem !important;
+    }
+}
+
+
+@media(max-width:1100px) {
+    .nav-home {
+        position: inherit !important;
+        flex-wrap: wrap !important;
+    }
+
+    .img-home {
+        display: none !important;
+    }
+
+    .navbar-nav li a {
+        display: none;
+    }
+    #nosso-convenio{
+        flex-wrap: wrap !important;
+    }
+}
+
+@media(max-width:567px) {
+    .banner-home h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .banner-home h1 {
+        font-size: 2rem !important;
+    }
+    .banner-home {
+        text-align: center !important;
+        display: flex;
+        align-items: center !important;
+    }
+
+    #conheca-appvr iframe {
+        width: 300px !important;
+    }
+
+    #conheca-appvr div div {
+        margin-right: 0 !important;
+    }
+
+    #conheca-appvr p,
+    #conheca-appvr h1 {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    #btn-associado img {
+        max-width: 300px !important;
+    }
+
+    #btn-associado a h2 {
+        top: 40px;
+        right: 65px;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    #btn-associado {
+        min-height: 60vh !important;
+    }
+
+    #noticias {
+        min-height: 120vh !important;
+    }
+
+    .titulo-box h1 {
+        right: 20% !important;
+    }
+
+    .link-home div {
+        min-width: 300px !important;
+    }
+
+    .card-servicos img {
+        max-height: 240px !important;
+    }
+
+    .titulo h1 {
+        font-size: 1rem !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .titulo h1::before {
+        display: none;
+    }
+
+    .titulo::before {
+        display: none;
+    }
+    #login img{
+        max-width: 300px;
+    }
+    #form-login{
+        width: 300px !important;
+    }
+    #form-login{
+        width: 300px !important;
+    }
+}
+
+@media(max-width:400px) {
+    .titulo-box h1 {
+        right: 10% !important;
+    }
+
+    .card-servicos img {
+        max-height: 200px !important;
+    }
+    .link-home div {
+        min-width: auto !important;
+    }
+}
