@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
         if ($request->user()->role === 'admin') {
             return redirect()->intended(route('admin.dashboard'));
         } elseif ($request->user()->role === 'user') {
-            return redirect()->intended(route('user.dashboard'));
+            return redirect()->intended(route('home'));
         } else {
             return redirect('login')->with('error', 'Dados incorretos!');
         }

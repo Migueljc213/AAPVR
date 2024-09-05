@@ -117,23 +117,24 @@
         <h1 style="color: #fff" class="text-center py-3 fw-light mt-3">NOTÍCIAS</h1>
         <div class="container d-flex justify-content-center align-items-center flex-wrap pb-5"
             style="gap:30px; background:#49c1e5;">
+            @foreach($news as $new)
             <div style="position: relative">
-                <img src="{{ asset('assets/img/NoticiasIdoso3.svg') }}" alt="">
+                <img src="{{ asset($new['img']) }}" alt="" style="max-width: 300px !important;">
                 <div
                     style="position: absolute; bottom: 0;  opacity: 0.5; background-color: #fff; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%; ">
                 </div>
                 <div
                     style="position: absolute; bottom: 0; background: transparent !important;  opacity:1; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%">
-                    <h3 class="fw-bold py-2 px-2 fs-5" style="color: var(--cor-primary); opacity: 1; background: transparent !important;">IDOSOS MAIS
-                        <br>CONECTADOS
+                    <h3 class="fw-bold py-2 px-2 fs-5" style="color: var(--cor-primary); opacity: 1; background: transparent !important;"> {{$new['name']}}
                     </h3>
-                    <div class="d-flex align-items-end mt-5 mb-0 justify-content-center">
+                    <div class="d-flex align-items-end mt-3 mb-0 justify-content-center">
                         <p class="mb-0" style="color: #000">Saiba mais.
                         </p>
                     </div>
                 </div>
             </div>
-            <div style="position: relative">
+            @endforeach
+            {{-- <div style="position: relative">
                 <img src="{{ asset('assets/img/NoticiasIdoso2.svg') }}" alt="">
                 <div
                     style="position: absolute; bottom: 0;  opacity: 0.5; background-color: #fff; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%">
@@ -168,7 +169,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </article>
 @endsection

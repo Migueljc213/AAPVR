@@ -35,19 +35,19 @@
 
                             @auth
                                 <li class="nav-item">
-                                    <a href="{{ url('/admin/dashboard') }}" class="rounded-md px-3 py-2 nav-link ">
+                                    <a href="{{ url('/admin/dashboard') }}" target="__blank" class="rounded-md px-3 py-2 nav-link ">
                                         Dashboard
                                     </a>
                                 </li>
                             @else
                                 <li class="nav-item">
-                                    <a href="{{ route('login') }}" class="rounded-md px-3 py-2  nav-link">
+                                    <a href="{{ route('login') }}" target="__blank" class="rounded-md px-3 py-2  nav-link">
                                         Login
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     @if (Route::has('register'))
-                                        <a href="{{ route('register') }}" class="rounded-md px-3 py-2 nav-link">
+                                        <a href="{{ route('register') }}" target="__blank" class="rounded-md px-3 py-2 nav-link">
                                             Registrar
                                         </a>
                                 </li>
