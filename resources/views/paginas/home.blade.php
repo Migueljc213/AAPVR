@@ -5,7 +5,8 @@
 
 @section('content')
     <div class="banner-home"
-        style="background-image: url('/assets/img/HomeBannerFundo.svg'); min-height: 90vh; position: relative;">
+
+        style="background-image: url({{ asset($banner[0]['img']) }}); min-height: 90vh; position: relative;">
         <div class="container d-flex justify-content-center  justify-content-md-start" style="margin: 0 auto; ">
             <div class="d-flex " style="align-items: center; min-height: 100vh; z-index:1; margin-left: 40px">
                 <div>
@@ -87,7 +88,7 @@
     <section id="conheca-appvr" class="d-flex align-items-center justify-content-center"
         style="background: #fff; min-height: 80vh; ">
         <div class="container d-flex align-items-center justify-content-center flex-wrap">
-            <div class="mt-5" style="margin-right: 60px; max-width:500px">
+            <div class="mt-5" style="margin-right: 60px; max-width:350px">
                 <h1 class="fw-bold mb-3" style="color: var(--cor-primary)">CONHEÇA O GRUPO APPVR</h1>
                 <p>A AAPVR é uma associação filantrópica e beneficente, que tem como objetivo promover a melhoria da
                     qualidade de vida da população e seus associados, através de assistência social, saúde, educação,
@@ -127,7 +128,7 @@
                     style="position: absolute; bottom: 0; background: transparent !important;  opacity:1; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%">
                     <h3 class="fw-bold py-2 px-2 fs-5" style="color: var(--cor-primary); opacity: 1; background: transparent !important;"> {{$new['name']}}
                     </h3>
-                    <div class="d-flex align-items-end mt-3 mb-0 justify-content-center">
+                    <div class="d-flex align-items-end mt-4 mb-0 justify-content-center">
                         <p class="mb-0" style="color: #000">Saiba mais.
                         </p>
                     </div>

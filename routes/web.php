@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\ProfileController;
@@ -58,28 +59,37 @@ Route::get('/convenio', function () {
 })->name('convenio');
 Route::get('/premios-titulos', function () {
     return view('paginas.premios-titulos');
-})->name('premios&titulos');
+})->name('premios-titulos');
 
-
+Route::get('/projetos', function () {
+    return view('paginas.projetos');
+})->name('projetos');
 
 
 Route::middleware('auth', 'admin')->group(function () {
     Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
     
-    Route::get('admin/lista-usuarios',[AdminController::class, 'getUsers'])->name('users.index');
+    Route::get('admin/lista-usuarios',[UserController::class, 'index'])->name('user.index');
+    Route::post('admin/lista-usuarios',[UserController::class, 'store'])->name('user.store');
     Route::get('admin/lista-usuarios/destroy/{id}',[UserController::class, 'destroy'])->name('user.destroy');    
     Route::get('admin/lista-usuarios/{id}',[UserController::class, 'edit'])->name('user.edit');    
     Route::post('admin/lista-usuarios/{id}',[UserController::class, 'update'])->name('user.update');    
-    /*Noticias */
+    Route::patch('/user/{id}/status', [UserController::class, 'updateStatus'])->name('user.updateStatus');
 
-    Route::get('admin/noticias',[NoticiaController::class, 'getNoticias'])->name('admin.noticias');
-    Route::post('admin/noticias',[NoticiaController::class, 'setNoticias'])->name('admin.noticias');
+    
+    /*Noticias */
+    Route::get('admin/noticias',[NoticiaController::class, 'getNoticias'])->name('noticias.index');
+    Route::post('admin/noticias',[NoticiaController::class, 'setNoticias'])->name('noticias.create');
     Route::get('admin/noticias/{id}',[NoticiaController::class, 'editNoticias'])->name('noticias.edit');
     Route::post('admin/noticias/{id}',[NoticiaController::class, 'updateNoticias'])->name('noticias.update');
     Route::get('admin/noticias/destroy/{id}',[NoticiaController::class, 'destroyNoticias'])->name('noticias.destroy');
     /*Noticias */
 
 
-   
+    Route::get('admin/banners',[BannerController::class, 'index'])->name('banners.index');
+    Route::post('admin/banners',[BannerController::class, 'store'])->name('banners.store');
+    Route::get('admin/banners/{id}',[BannerController::class, 'edit'])->name('banners.edit');
+    Route::post('admin/banners/{id}',[BannerController::class, 'update'])->name('banners.update');
+    Route::get('admin/banners/destroy/{id}',[BannerController::class, 'destroy'])->name('banners.destroy');
  
 });

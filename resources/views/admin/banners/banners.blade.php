@@ -1,6 +1,6 @@
 <x-app-layout>
     <style>
-        #modalNewNews {
+        #modalNew {
             background-color: rgba(0, 0, 0, .5);
             height: 100vh;
             width: 100vw;
@@ -11,7 +11,7 @@
             z-index: 1;
         }
 
-        #modalNewNews div {
+        #modalNew div {
             background: #fff;
             margin: 0 auto;
             min-width: 400px;
@@ -22,7 +22,7 @@
             padding: 10px
         }
 
-        #modalNewNews div span {
+        #modalNew div span {
             position: absolute;
             top: -30px;
             right: -30px;
@@ -43,7 +43,7 @@
             align-items: center
         }
 
-        #modalNewNews.ativo {
+        #modalNew.ativo {
             display: flex
         }
     </style>
@@ -51,7 +51,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 " tyle="min-width: 80vw;">
-                    <button id="modalBtnOpen" class="btn btn-primary my-3" onclick="newNews()">Criar Noticias</button>
+                    <button id="modalBtnOpen" class="btn btn-primary my-3" onclick="add()">Criar Banner</button>
 
                     <table class="p-3 text-center" style="min-width: 100%;">
                         <thead class="p-3" style="border: solid 1px gray;">
@@ -59,29 +59,28 @@
                                 <th class="p-2">Imagem</th>
                                 <th class="p-2">Nome</th>
                                 <th class="p-2">Descrição</th>
-
                                 <th class="p-2">Açoes</th>
                             <tr>
                         </thead>
                         <tbody class="mt-3">
-                            @foreach ($noticias as $not)
+                            @foreach ($banners as $banner)
                                 <tr >
                                     <td class="p-1 py-2 d-flex justify-content-center">
-                                        <p><img src="{{ asset($not['img']) }}" alt="" width="80"></p>
+                                        <p><img src="{{ asset($banner['img']) }}" alt="" width="80"></p>
                                     </td>
                                     <td class="p-1 py-2">
-                                        <p>{{ $not['name'] }}</p>
+                                        <p>{{ $banner['title'] }}</p>
                                     </td>
                                     <td class="p-1 py-2">
-                                        <p>{{ $not['description'] }}</p>
+                                        <p>{{ $banner['description'] }}</p>
                                     </td>
 
                                     <td class="p-1  " style="gap: 10px;">
-                                        <a href="{{ route('noticias.edit', ['id' => $not['id']]) }}"
+                                        <a href="{{ route('banners.edit', ['id' => $banner['id']]) }}"
                                             class="btn btn-info btn-sm">
                                             <i class="fa-solid fa-gear" style="color: #fff"></i>
                                         </a>
-                                        <a href="{{ route('noticias.destroy', ['id' => $not['id']]) }}"
+                                        <a href="{{ route('banners.destroy', ['id' => $banner['id']]) }}"
                                             class="btn btn-danger btn-sm">
                                             <i class="fa-solid fa-trash" style="color: #fff"></i>
                                         </a>
@@ -109,18 +108,18 @@
             </div>
         </div>
     </div>
-    <div id="modalNewNews" class="justify-content-center align-items-center">
+    <div id="modalNew" class="justify-content-center align-items-center">
         <div>
             <span class="modalBtnClose">X</span>
-            <form action="{{ route('noticias.create') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('banners.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-2">
                     <label for="img" class="form-label">URL IMAGEM</label>
                     <input type="file" class="form-control" name="img" id="img">
                 </div>
                 <div class="mb-2">
-                    <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" name="name" id="name">
+                    <label for="title" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" name="title" id="title">
                 </div>
 
                 <div class="mb-2">
@@ -143,8 +142,8 @@
 </x-app-layout>
 
 <script>
-    function newNews() {
-        const modal = document.getElementById('modalNewNews');
+    function add() {
+        const modal = document.getElementById('modalNew');
         const modalBtnOpen = document.getElementById('modalBtnOpen');
         const modalBtnClose = document.querySelectorAll('.modalBtnClose');
         console.log()

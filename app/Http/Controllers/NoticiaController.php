@@ -41,7 +41,7 @@ class NoticiaController extends Controller
         $noticias->img = $imagePath;
         $noticias->link = $request->input('link');
         $noticias->save();
-        return redirect()->route('admin.noticias')->with('success', 'Notícia criada com sucesso!');
+        return redirect()->route('noticias.index')->with('success', 'Notícia criada com sucesso!');
     }
 
     public function editNoticias(Request $request, string $id)
@@ -50,7 +50,7 @@ class NoticiaController extends Controller
         if ($noticia) {
             return view('admin.noticias.editar-noticia', compact('noticia'));
         }
-        return view('admin.noticias.noticias')->with('fail', 'Noticias não encontrada');
+        return  redirect()->route('noticias.index')->with('fail', 'Notícia não encontrada');
     }
 
     public function updateNoticias(Request $request, string $id)
@@ -63,14 +63,14 @@ class NoticiaController extends Controller
             $noticia->name = $request->input('name');
             $noticia->description = $request->input('description');
             if ($request->hasFile('img')) {
-                $imagePath = $request->file('img')->store('noticia' . $horaAtual, 'public');
+                $imagePath = $request->file('img')->store('noticia/' . $horaAtual . '/', 'public');
                 $noticia->img = $imagePath;
             }
             $noticia->link = $request->input('link');
             $noticia->save();
-            return redirect()->route('admin.noticias')->with('success', 'Notícia atualizada com sucesso!');
+            return redirect()->route('noticias.index')->with('success', 'Notícia atualizada com sucesso!');
         }
-        return redirect()->route('admin.noticias')->with('fail', 'Notícia não encontrada');
+        return redirect()->route('noticias.index')->with('fail', 'Notícia não encontrada');
     }
 
 
@@ -78,7 +78,7 @@ class NoticiaController extends Controller
         $noticia = Noticia::findOrFail($id);
         if($noticia){
             $noticia->delete();
-            return redirect()->route('admin.noticias')->with('sucesso', 'Notícia excluida com sucesso!');
+            return redirect()->route('noticias.index')->with('sucesso', 'Notícia excluida com sucesso!');
         }
     }
 }

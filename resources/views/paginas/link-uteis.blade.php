@@ -35,7 +35,7 @@
     <section class="d-flex align-items-center justify-content-center" style="min-height: 80vh">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 pt-4">
+                <div class="col-md-6 pt-4 ">
                     <ul>
                         <li class="pt-4" >
                             <a class="d-flex align-items-center" href="" style="gap:20px;">
