@@ -31,7 +31,7 @@ a:hover {
     font-size: .9rem !important;
 }
 
-.navbar-nav .nav-link:hover ,
+.navbar-nav .nav-link:hover,
 .nav-footer li:hover a {
     transition-duration: .5;
     color: #ff7700;
@@ -99,73 +99,82 @@ a:hover {
 .form-login input::placeholder {
     color: var(--cor-primary);
 }
-#premios li{
+
+#premios li {
     margin-bottom: 10px;
 }
-.projetos_img{
+
+.projetos_img {
     max-width: 350px;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
         opacity: 0.8;
     }
-}
-.logos{
-    &:hover{
-        cursor: pointer;
-        opacity: 0.8;
-    }
-}
-.nav-link{
-    padding: 10px 0px;
-}
-.dropdown{
-    position: relative;
-    padding-bottom: 20px !important;
-    
-}
-.dropdownNav{
-    display: none;
-    
-}
-.dropdownNav ul li a{
-    text-decoration: none;
-    white-space: nowrap;
-    font-size: .7rem !important;
-    text-align: start;
-}
-.dropdownNav ul li:last-child{
-    border-radius: 0 0 12px 12px;
-}
-.dropdownNav.ativo{
-    position: absolute;
-    background-color: #fff;
-    list-style: none;
-    padding-top: 10px;
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); 
-    display:  inline-block; ;
-    flex-direction: column;
-    border-radius: 0 0 12px 12px;
-    z-index: 1;
-    animation: slideDown 0.5s ease forwards;
-    min-width: 250px !important;
 }
 
-.dropdownNav.ativo li{
-    background-color: #fff;
-    margin: 0 !important;
+.logos {
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 }
+
+.nav-link {
+    padding: 10px 0px;
+}
+
+
+
+.dropdown-menu {
+
+    max-height: 310px !important;
+}
+
+.dropdown-menu li {
+    padding: 8px !important;
+}
+
+@keyframes drop {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    font-weight: bold;
+    flex-direction: column;
+    border-radius: 0 0 12px 12px;
+    z-index: 1000;
+    animation: slideDown 0.5s ease forwards;
+    min-width: 250px !important;
+    padding: 10px;
+    list-style: none;
+}
+
+
+
 
 @keyframes slideDown {
     from {
         max-height: 0;
         opacity: 0;
     }
+
     to {
-        max-height: 200px; 
+        max-height: 200px;
         opacity: 1;
     }
 }
+
 @media(max-width:1300px) {
     #noticias img {
         max-width: 250px;
@@ -175,16 +184,20 @@ a:hover {
         flex-direction: column-reverse;
         margin-top: 30px;
     }
-     #login h3 {
-       display: none;
+
+    #login h3 {
+        display: none;
     }
-    #login p{
+
+    #login p {
         display: none !important;
     }
-    #form-login{
+
+    #form-login {
         width: 400px !important;
     }
-    #form-login input{
+
+    #form-login input {
         width: 100% !important;
     }
 }
@@ -199,17 +212,20 @@ a:hover {
         color: #fff;
         font-size: 2rem;
     }
+
     #noticias img {
         width: 200px !important;
     }
-    .titulo-banner h3{
+
+    .titulo-banner h3 {
         right: auto !important;
         left: 0 !important;
     }
-    #projetos img{
+
+    #projetos img {
         justify-content: center !important;
         width: 500px !important;
-       
+
     }
 }
 
@@ -227,7 +243,7 @@ a:hover {
     /* .navbar-nav li a {
         display: none;
     } */
-    #nosso-convenio{
+    #nosso-convenio {
         flex-wrap: wrap !important;
     }
 }
@@ -259,9 +275,11 @@ a:hover {
     .titulo h1 {
         font-size: 2rem !important;
     }
-    #login img{
+
+    #login img {
         max-width: 400px;
     }
+
     .banner-home h2 {
         font-size: 2rem !important;
     }
@@ -269,11 +287,8 @@ a:hover {
     .banner-home h1 {
         font-size: 3rem !important;
     }
-    .dropdownNav.ativo{
-        left: -80%;
-        top: 0; /* Centraliza horizontalmente */
-     
-    }
+
+
 }
 
 
@@ -286,6 +301,7 @@ a:hover {
     .banner-home h1 {
         font-size: 2rem !important;
     }
+
     .banner-home {
         text-align: center !important;
         display: flex;
@@ -350,36 +366,44 @@ a:hover {
     .titulo::before {
         display: none;
     }
-    #login img{
+
+    #login img {
         max-width: 300px;
     }
-    #form-login{
-        width: 300px !important;
-    }
-    #form-login{
+
+    #form-login {
         width: 300px !important;
     }
 
-    .titulo-banner h3{
-       font-size: 2rem !important;
-       
+    #form-login {
+        width: 300px !important;
     }
-    #projetos img{
+
+    .titulo-banner h3 {
+        font-size: 2rem !important;
+
+    }
+
+    #projetos img {
         justify-content: center !important;
         width: 300px !important;
-       
+
     }
-    .projetos_img{
+
+    .projetos_img {
         max-width: 250px;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             opacity: 0.8;
         }
     }
-    .logo img{
+
+    .logo img {
         height: 50px !important;
     }
-    .parceiros-texto p{
+
+    .parceiros-texto p {
         margin: 30px 20px !important;
     }
 }
@@ -392,12 +416,38 @@ a:hover {
     .card-servicos img {
         max-height: 200px !important;
     }
+
     .link-home div {
         min-width: auto !important;
     }
-    #projetos img{
+
+    #projetos img {
         justify-content: center !important;
         width: 250px !important;
-       
+
+    }
+}
+
+@media(max-width:600px) {
+
+    .responsive-table td,
+    .responsive-table th {
+        font-size: 0.8rem;
+    }
+
+    .responsive-table td a {
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width:450px) {
+
+    .responsive-table td,
+    .responsive-table th {
+        font-size: 0.6rem;
+    }
+
+    .responsive-table td a {
+        font-size: 0.4rem;
     }
 }

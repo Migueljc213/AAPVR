@@ -46,15 +46,16 @@
         #modalNewUser.ativo {
             display: flex
         }
+     
     </style>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <button id="modalBtnOpen" class="btn btn-primary my-3" onclick="newNews()" data-bs-toggle="tooltip" data-bs-placement="top" title="Novo usuário">Novo Usuário</button>
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 " tyle="min-width: 80vw;">
-                    <table class="p-3 text-center" style="min-width: 100%;">
+            <button id="modalBtnOpen" class="btn btn-primary my-3 mx-2" onclick="newNews()" data-bs-toggle="tooltip" data-bs-placement="top" title="Novo usuário">Novo Usuário</button>
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" style="margin: 0 10px">
+                <div class="p-6 text-gray-900 " tyle="min-width: 80vw; ">
+                    <table class="responsive-table  p-3 text-center" style="min-width: 100%; ">
                         <thead class="p-3" style="border: solid 1px gray;">
-                            <tr>
+                            <tr class="text-start">
                                 <th class="p-2">Nome</th>
                                 <th class="p-2">Email</th>
                                 <th class="p-2">CPF</th>
@@ -63,11 +64,11 @@
                         </thead>
                         <tbody>
                             @foreach ($usuarios as $user)
-                                <tr>
+                                <tr class="text-start">
                                     <td class="p-1">{{ $user['name'] }}</td>
                                     <td class="p-1">{{ $user['email'] }}</td>
-                                    <td class="p-1">{{ $user['cpf'] }}</td>
-                                    <td class="p-1 d-flex justify-content-center text-center" style="gap: 10px;">
+                                    <td class="p-1 ">{{ $user['cpf'] }}</td>
+                                    <td class="p-1 d-flex  align-items-center text-start" style="gap: 10px;">
                                         <a  href="{{ route('user.destroy', ['id' => $user['id']]) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Apagar usuário"
                                             class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i></a>
                                         <a href="{{ route('user.edit', ['id' => $user['id']]) }}"  
@@ -76,7 +77,7 @@
                                         <form action="{{ route('user.updateStatus', ['id' => $user['id']]) }}" method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <input type="checkbox" name="status" data-bs-toggle="tooltip" data-bs-placement="top" title="Ativar/Desativar usuário" style="width: 30px; height: 30px; cursor: pointer;" onchange="this.form.submit()"
+                                            <input type="checkbox" name="status" data-bs-toggle="tooltip" data-bs-placement="top" title="Ativar/Desativar usuário" style="width: 15px; height: 15px; cursor: pointer; border-radius: 4px" onchange="this.form.submit()"
                                                 {{ $user->status == 'active' ? 'checked' : '' }}> 
                                         </form>
                                     </td>

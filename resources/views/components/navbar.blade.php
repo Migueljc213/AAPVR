@@ -35,89 +35,67 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto d-flex align-items-center">
-                        <li class=" nav-item" style="position: relative;">
-                            <a class="dropdown nav-link" href="{{ route('convenio') }}">Quem Somos </a>
-                            <div class="dropdownNav p-0">
-                                <ul class="p-0">
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('premios-titulos') }}">Prêmios e Títulos</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">Serviços</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('link') }}">Link Úteis</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Quem Somos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="{{ route('sobre') }}">Sobre nós</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ route('premios-titulos') }}">Prêmios e Títulos</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a></li>
+                                <li><a class="dropdown-item" href="{{ route('link') }}">Link Úteis</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="/">Estatuto</a>
+                                <li><a class="dropdown-item" target="_blank" href="/">Governança</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('sobre') }}">Convênios</a>
-                        </li>
-                        <li class="nav-item" style="position: relative;">
-                            <a class="dropdown nav-link" href="{{ route('guia-usuario') }}">Guia do Associado</a>
-                            <div class="dropdownNav p-0">
-                                <ul class="p-0">
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">Contatos</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('projetos') }}">Serviços</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">Link Úteis</a>
-                                    </li>
 
-
-                                </ul>
-                            </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownGuia" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Guia do Associado
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownGuia">
+                                <li><a class="dropdown-item" href="{{ route('guia-usuario') }}">Guia</a></li>
+                                 <!-- Pendente -->
+                                <li><a class="dropdown-item" href="./">Contatos</a></li>
+                                <li><a class="dropdown-item" href="{{ route('projetos') }}">Responsabilidade Médicas</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ route('link') }}">Links Úteis</a></li>
+                            </ul>
                         </li>
+
+                        <!-- Marcação de Consultas - Menu Simples -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('agenda') }}">Marcação de Consultas</a>
                         </li>
 
-                        <li class="nav-item" style="position: relative;">
-                            <a class="pb-3 dropdown nav-link " href="{{ route('sobre') }}">Responsabilidade <br>
-                                Social</a>
-                            <div class="dropdownNav p-0">
-                                <ul class="p-0">
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">Apostila- Título UPE 2023 &
-                                            2024</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('projetos') }}">Projetos</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">Serviços</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">
-                                            CIPA</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">
-                                            PORTARIA CEBAS</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">
-                                            TERMO DE FORMENTO</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">
-                                            BALANÇO PATRIMONIAL</a>
-                                    </li>
-                                    <li class="p-2">
-                                        <a class="nav-link" href="{{ route('servicos') }}">
-                                            LGPD</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
+                        <!-- Responsabilidade Social - Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownResponsabilidade"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Responsabilidade Social
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownResponsabilidade">
+                                <li><a class="dropdown-item" href="/">Apostila - Título UPE 2023
+                                        & 2024</a></li>
+                                <li><a class="dropdown-item" href="{{ route('projetos') }}">Projetos</a></li>
+                                <li><a class="dropdown-item" href="{{ route('servicos') }}">Serviços</a></li>
+                                <!-- Pendente -->
+                                <li><a class="dropdown-item" href="{{ route('servicos') }}">CIPA</a></li>
+                                <li><a class="dropdown-item" href="/">Portaria CEBAS</a></li>
+                                <!--link para pdf-->
+                                <li><a class="dropdown-item" target="_blank" href="/">Termo de Fomento</a></li>
+                                <!--link para pdf-->
+                                <li><a class="dropdown-item" target="_blank" href="?">Balanço
+                                        Patrimonial</a>
+                                </li>
+                                 <!-- Pendente -->
+                                <li><a class="dropdown-item" href="{{ route('servicos') }}">LGPD</a></li>
+                            </ul>
                         </li>
 
                         @if (Route::has('login'))
@@ -211,24 +189,6 @@
                     // Verifica a largura ao redimensionar a janela
                     window.addEventListener('resize', verificarLargura);
                     verificarLargura()
-
-                    
-                    const dropdownBtn = document.querySelectorAll('.dropdown')
-                    const dropdownNav = document.querySelectorAll('.dropdownNav')
-
-                    console.log(dropdownBtn)
-
-                    Array.from(dropdownBtn).forEach((btn) => {
-                        btn.addEventListener('mouseenter', () => {
-                            btn.nextElementSibling.classList.add('ativo');
-
-                        })
-                        btn.nextElementSibling.addEventListener('mouseleave', () => {
-                            timeoutId = setTimeout(() => {
-                                btn.nextElementSibling.classList.remove('ativo');
-                            }, 200);
-
-                        })
-                    })
                 </script>
 </header>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

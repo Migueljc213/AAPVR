@@ -46,6 +46,23 @@
         #modalNewNews.ativo {
             display: flex
         }
+
+           @media(max-width:600px){
+            .responsive-table td, .responsive-table th{
+                font-size: 0.8rem;
+            }
+            .responsive-table td a{
+                font-size: 0.8rem;
+            }
+        }
+        @media(max-width:450px){
+            .responsive-table td, .responsive-table th{
+                font-size: 0.6rem;
+            }
+            .responsive-table td a{
+                font-size: 0.4rem;
+            }
+        }
     </style>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -53,7 +70,7 @@
                 <div class="p-6 text-gray-900 " tyle="min-width: 80vw;">
                     <button id="modalBtnOpen" class="btn btn-primary my-3" onclick="newNews()">Criar Noticias</button>
 
-                    <table class="p-3 text-center" style="min-width: 100%;">
+                    <table class="responsive-table p-3 text-center" style="min-width: 100%;">
                         <thead class="p-3" style="border: solid 1px gray;">
                             <tr>
                                 <th class="p-2">Imagem</th>

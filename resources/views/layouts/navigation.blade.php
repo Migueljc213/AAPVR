@@ -123,11 +123,49 @@
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
+            <div class="px-4 py-3">
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
 
+            <x-dropdown align="left" width="300">
+                <x-slot name="trigger">
+                    <button style="width: 100% !important;"
+                        class="flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                        <div>
+                            <p>Pessoas <i class="fa-solid fa-chevron-down"></i> </p>
+                        </div>
+                    </button>
+                </x-slot>
+
+                <x-slot name="content">
+                    <x-dropdown-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                        {{ __('Usuarios') }}
+                    </x-dropdown-link>
+
+                </x-slot>
+            </x-dropdown>
+
+            <x-dropdown align="left" width="300" >
+                <x-slot name="trigger" style="width: 100% !important;">
+                    <button style="width: 100% !important; margin-top: 20px !important;"
+                        class="flex  items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                        <div>
+                            <p>Ferramentas <i class="fa-solid fa-chevron-down"></i> </p>
+                        </div>
+                    </button>
+                </x-slot>
+
+                <x-slot name="content" style="width: 100% !important;">
+                    <x-dropdown-link :href="route('noticias.index')">
+                        {{ __('Noticias') }}
+                    </x-dropdown-link>
+                    <x-dropdown-link :href="route('banners.index')">
+                        {{ __('Banner') }}
+                    </x-dropdown-link>
+
+                </x-slot>
+            </x-dropdown>
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Perfil') }}
