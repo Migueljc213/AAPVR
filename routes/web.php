@@ -65,6 +65,13 @@ Route::get('/projetos', function () {
     return view('paginas.projetos');
 })->name('projetos');
 
+Route::get('/projeto-inclusao', function () {
+    return view('paginas.inclusao');
+})->name('inclusao');
+Route::get('/projeto-viva', function () {
+    return view('paginas.viva');
+})->name('viva');
+
 
 Route::middleware('auth', 'admin')->group(function () {
     Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');

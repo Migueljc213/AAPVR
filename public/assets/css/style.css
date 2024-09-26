@@ -246,6 +246,16 @@ a:hover {
     #nosso-convenio {
         flex-wrap: wrap !important;
     }
+
+    .img-banner {
+
+        right: -40% !important;
+    }
+
+    .img-banner img {
+        max-width: 300px !important;
+    }
+
 }
 
 @media(max-width:970px) {
@@ -288,7 +298,19 @@ a:hover {
         font-size: 3rem !important;
     }
 
+    .titulo-banner h3 {
+        font-size: 2rem !important;
+        position: relative !important;
+    }
 
+    .img-banner {
+
+        right: 0% !important;
+    }
+
+    .img-banner img {
+        max-width: 250px !important;
+    }
 }
 
 
@@ -379,9 +401,14 @@ a:hover {
         width: 300px !important;
     }
 
+    .titulo-banner {
+        position: relative !important;
+    }
+
     .titulo-banner h3 {
         font-size: 2rem !important;
-
+        align-items: center;
+        margin-top: 10px;
     }
 
     #projetos img {
@@ -405,6 +432,15 @@ a:hover {
 
     .parceiros-texto p {
         margin: 30px 20px !important;
+    }
+
+    .img-banner {
+        top: -65% !important;
+        right: 0% !important;
+    }
+
+    .img-banner img {
+        max-width: 250px !important;
     }
 }
 

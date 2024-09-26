@@ -46,22 +46,7 @@
         #modalNewNews.ativo {
             display: flex
         }
-
-           @media(max-width:600px){
-            .responsive-table td, .responsive-table th{
-                font-size: 0.8rem;
-            }
-            .responsive-table td a{
-                font-size: 0.8rem;
-            }
-        }
-        @media(max-width:450px){
-            .responsive-table td, .responsive-table th{
-                font-size: 0.6rem;
-            }
-            .responsive-table td a{
-                font-size: 0.4rem;
-            }
+  }
         }
     </style>
     <div class="py-12">
