@@ -43,8 +43,10 @@
             </div>
             <div id="form-login" class="d-flex flex-column justify-content-center mt-2" style="min-width: 400px"
                 class="px-3">
+       
                 <div style="width: 100%">
                     <x-guest-layout>
+                        <h1 class="fw-bold my-2 text-center text-uppercase" style="color: #fff">Cadastro</h1>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 

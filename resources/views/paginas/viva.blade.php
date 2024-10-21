@@ -65,7 +65,7 @@
 
             </div>
             <button class="btn fw-bold text-uppercase w-100 mt-5 rounded-pill p-2"
-                style="background: #ff7700; color: #fff"><i></i>acesse a plataforma e conheça um pouco mais do
+                style="background: #ff7700; color: #fff"><i class="fa-solid fa-file-lines px-1"></i>acesse a plataforma e conheça um pouco mais do
                 projeto</button>
         </div>
     </article>
@@ -91,7 +91,7 @@
                     <h2 class="fs-3 fw-bold mt-5 " style="color: #0389b7">CLIPPING PROJETO VIVA</h2>
                     <p>Veja o clipping completo do projeto VIVA ao longo do ano de 2022 e 2023.</p>
                     <button class="btn fw-bold text-uppercase w-100 mt-3 rounded-pill p-2"
-                        style="background: #ff7700; color: #fff; font-size: .7rem"><i></i>confira o clipping completo de
+                        style="background: #ff7700; color: #fff; font-size: .7rem"><i class="fa-solid fa-file-lines px-1"></i>confira o clipping completo de
                         todas as mídias</button>
                 </div>
             </div>

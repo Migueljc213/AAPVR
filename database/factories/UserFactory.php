@@ -26,19 +26,40 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
+            'cpf' => $this->generateFakeCpf(),
             'email_verified_at' => now(),
+            'role' => 'user',
+            'status' => 'active',
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
         ];
     }
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     */
-    public function unverified(): static
+    private function generateFakeCpf(): string
     {
-        return $this->state(fn (array $attributes) => [
-            'email_verified_at' => null,
-        ]);
+        $faker = \Faker\Factory::create();
+
+        // Gera os 9 primeiros dígitos
+        $cpf = str_pad($faker->randomNumber(9, true), 9, '0', STR_PAD_LEFT);
+
+        // Cálculo do primeiro dígito verificador
+        $sum = 0;
+        for ($i = 0; $i < 9; $i++) {
+            $sum += $cpf[$i] * (10 - $i);
+        }
+        $firstDigit = 11 - ($sum % 11);
+        $firstDigit = ($firstDigit >= 10) ? 0 : $firstDigit;
+        $cpf .= $firstDigit;
+
+        // Cálculo do segundo dígito verificador
+        $sum = 0;
+        for ($i = 0; $i < 10; $i++) {
+            $sum += $cpf[$i] * (11 - $i);
+        }
+        $secondDigit = 11 - ($sum % 11);
+        $secondDigit = ($secondDigit >= 10) ? 0 : $secondDigit;
+        $cpf .= $secondDigit;
+
+        return $cpf;
     }
 }

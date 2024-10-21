@@ -1,20 +1,18 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\BannerController;
-use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\NoticiaController;
 use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -30,7 +28,7 @@ Route::get('/agenda', function () {
     return view('paginas.agenda-medica');
 })->name('agenda');
 
-Route::get('/guia', function () {
+Route::get('/guia-usuario', function () {
     return view('paginas.guia-usuario');
 })->name('guia-usuario');
 
@@ -68,10 +66,23 @@ Route::get('/projetos', function () {
 Route::get('/projeto-inclusao', function () {
     return view('paginas.inclusao');
 })->name('inclusao');
+
 Route::get('/projeto-viva', function () {
     return view('paginas.viva');
 })->name('viva');
 
+
+Route::get('/CIPA', function () {
+    return view('paginas.cipa');
+})->name('cipa');
+
+Route::get('/projeto-humanizacao', function () {
+    return view('paginas.humanizacao');
+})->name('humanizacao');
+
+// Route::middleware('auth', 'user')->prefix('user.')->group(function () {
+//     Route::get('dashboard', [::class, 'index'])->name('index');
+// });
 
 Route::middleware('auth', 'admin')->group(function () {
     Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');

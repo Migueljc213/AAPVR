@@ -76,8 +76,10 @@
                     </div>
                     <div class="col-12 col-md-6 col-xl-3 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
-                        <img class="projetos_img" src="{{ asset('assets/img/Projetos7.png') }}" width="250"
-                            alt="">
+                        <a href="{{ route('humanizacao') }}">
+                            <img class="projetos_img" src="{{ asset('assets/img/Projetos7.png') }}" width="250"
+                                alt="">
+                        </a>
                     </div>
                 </div>
             </div>

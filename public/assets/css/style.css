@@ -1,3 +1,5 @@
+
+
 * {
     text-decoration: none;
     list-style: none;
@@ -43,17 +45,17 @@ a:hover {
 }
 
 #btn-associado a:hover h2 {
-    color: #000;
+    color: #0489b7;
     cursor: pointer;
 }
 
 #btn-associado a h2 {
     position: absolute !important;
     z-index: 1;
-    top: 140px;
+    top: 40%;
     right: 180px;
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     opacity: 1 !important;
 }
 
@@ -102,6 +104,10 @@ a:hover {
 
 #premios li {
     margin-bottom: 10px;
+}
+.hover:hover{
+    opacity: 0.8 !important;
+    cursor: pointer;
 }
 
 .projetos_img {
@@ -175,6 +181,52 @@ a:hover {
     }
 }
 
+#modalNew {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+#modalNew div {
+    background: #fff;
+    margin: 0 auto;
+    min-width: 400px;
+    box-shadow: 0 0 0 10px white;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 12px;
+    padding: 10px
+}
+
+#modalNew div span {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 4px solid white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#modalNew.ativo {
+    display: flex
+}
 @media(max-width:1300px) {
     #noticias img {
         max-width: 250px;
@@ -305,11 +357,16 @@ a:hover {
 
     .img-banner {
 
-        right: 0% !important;
+       display: none;
     }
 
     .img-banner img {
         max-width: 250px !important;
+    }
+
+    #conheca-appvr iframe {
+        width: 300px !important;
+        height: auto !important;
     }
 }
 
@@ -330,9 +387,7 @@ a:hover {
         align-items: center !important;
     }
 
-    #conheca-appvr iframe {
-        width: 300px !important;
-    }
+
 
     #conheca-appvr div div {
         margin-right: 0 !important;

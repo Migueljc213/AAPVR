@@ -51,7 +51,7 @@
                     Inclusão Digital irá facilitar muito a vida dos que participarem.
                 </p>
                 <button class="btn fw-bold text-uppercase w-100 mt-4 rounded-pill p-2"
-                    style="background: #ff7700; color: #fff"><i></i>acesse a plataforma e conheça um pouco mais do
+                    style="background: #ff7700; color: #fff"><i class="fa-solid fa-file-lines px-1"></i>acesse a plataforma e conheça um pouco mais do
                     projeto</button>
             </div>
         </div>

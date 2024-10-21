@@ -42,7 +42,7 @@
         <div style="background: #fff; min-height: 40vh">
             <div class="nav-home container d-flex  justify-content-center "
                 style="gap:30px; position: absolute;  bottom: -320px;right: 100px; margin: 0 auto;">
-                <a class="link-home" href="#" style="text-decoration: none !important;">
+                <a class="link-home" href="{{route('agenda')}}" style="text-decoration: none !important;">
                     <div class=" my-3 d-flex align-items-center justify-content-center"
                         style="background: linear-gradient(135deg, #49c1e5 0%, #0480a6 80%); border-radius: 12px;  min-height: 300px; box-shadow: 10px 10px 10px 4px rgba(0, 0, 0, 0.3); width: 250px">
                         <div class="d-flex flex-column justify-content-start text-center p-4 align-items-center"
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="link-home" href="#" style="text-decoration: none !important; ">
+                <a class="link-home" href="{{route('convenio')}}" style="text-decoration: none !important; ">
                     <div class=" my-3 d-flex align-items-center justify-content-center"
                         style="background: linear-gradient(135deg, #49c1e5 0%, #0480a6 80%); border-radius: 12px;  min-height: 300px; box-shadow: 10px 10px 10px 4px rgba(0, 0, 0, 0.3); width: 250px">
                         <div class="d-flex flex-column justify-content-start text-center p-4 align-items-center"
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="link-home" href="#" style="text-decoration: none !important; ">
+                <a class="link-home" href="{{route('guia-usuario')}}" style="text-decoration: none !important; ">
                     <div class=" my-3 d-flex align-items-center justify-content-center"
                         style="background: linear-gradient(135deg, #49c1e5 0%, #0480a6 80%); border-radius: 12px;  min-height: 300px; box-shadow: 10px 10px 10px 4px rgba(0, 0, 0, 0.3); width: 250px">
                         <div class="d-flex justify-content-start flex-column  text-center p-4 align-items-center"
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="link-home" href="#" style="text-decoration: none !important; ">
+                <a class="link-home" href="{{route('projetos')}}" style="text-decoration: none !important; ">
                     <div class=" my-3 d-flex align-items-center justify-content-center"
                         style="background: linear-gradient(135deg, #49c1e5 0%, #0480a6 80%); border-radius: 12px;  min-height: 300px; box-shadow: 10px 10px 10px 4px rgba(0, 0, 0, 0.3); width: 250px">
                         <div class="d-flex justify-content-start  flex-column  text-center p-2 align-items-center"
@@ -105,22 +105,21 @@
 
     </section>
 
-    <article id="btn-associado" class=" d-flex justify-content-center align-items-center" style="min-height: 90vh">
-        <a class="" href="">
-            <img src="{{ asset('assets/img/HomeSeja.svg') }}" alt="Seja Associado" style="max-width: 900px">
+    <article id="btn-associado" class=" d-flex justify-content-center align-items-center hover" style="min-height: 80vh">
+        <a class="" href="{{route('login')}}">
+            <img src="{{ asset('assets/img/HomeSeja.svg') }}" alt="Seja Associado" style="max-width: 600px">
             <h2>SEJA UM ASSOCIADO</h2>
-
         </a>
     </article>
 
-    <article id="noticias" class="d-flex justify-content-center align-items-center flex-column"
+    <article id="noticias" class="d-flex justify-content-center align-items-center flex-column "
         style="background: url({{ asset('assets/img/FundoNoticias.svg') }}) no-repeat; min-height:90vh;  height:auto;">
         <h1 style="color: #fff" class="text-center py-3 fw-light mt-3">NOTÍCIAS</h1>
         <div class="container d-flex justify-content-center align-items-center flex-wrap pb-5"
             style="gap:30px; background:#49c1e5;">
             @foreach($news as $new)
             <div style="position: relative">
-                <img src="{{ asset($new['img']) }}" alt="" style="max-width: 300px !important;">
+                <img class="object-fit-cover" src="{{ asset($new['img']) }}" alt="" style="max-width: 300px !important;">
                 <div
                     style="position: absolute; bottom: 0;  opacity: 0.5; background-color: #fff; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%; ">
                 </div>
