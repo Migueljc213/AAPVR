@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PaginasGaleria;
 use App\Models\User;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
@@ -17,4 +18,11 @@ Artisan::command('avatar', function (){
         }
 
     }
+});
+
+Artisan::command('tipo', function () {
+    PaginasGaleria::create([
+        'href' => 'educacao-financeira',
+        'nome' => 'Projeto educacao-financeira'
+    ]);
 });

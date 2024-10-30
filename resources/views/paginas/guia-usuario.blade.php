@@ -80,17 +80,18 @@
                 <div>
                     <div class="d-flex justify-content-center align-items-center flex-column" style=" gap:20px;">
                         <div>
-                            <a href=""><img src="{{ asset('assets/img/icon4.svg') }}" alt=""
+                            <a href="https://www.youtube.com/channel/UCDtfTw8DRXY9w-jd1zMfs2g" target="__blank"><img src="{{ asset('assets/img/icon4.svg') }}" alt=""
                                     width="60px"></a>
-                            <a href=""><img src="{{ asset('assets/img/icon5.svg') }}" alt=""
+                            <a href="https://www.instagram.com/aap_vr/?hl=pt-br" target="__blank"><img src="{{ asset('assets/img/icon5.svg') }}" alt=""
                                     width="60px"></a>
-                            <a href=""><img src="{{ asset('assets/img/icon3.svg') }}" alt=""
+                            <a href="https://www.facebook.com/AAPVROficial/" target="__blank"><img src="{{ asset('assets/img/icon3.svg') }}" alt=""
                                     width="60px"></a>
                         </div>
                         <div>
-                            <a href=""><img src="{{ asset('assets/img/icon2.svg') }}" alt=""
+                            <a href="https://www.aapvr.org.br/blog-aap-vr/" target="__blank"><img src="{{ asset('assets/img/icon2.svg') }}" alt=""
                                     width="60px"></a>
-                            <a href=""><img src="{{ asset('assets/img/icon1.svg') }}" alt=""
+                                {{--Blog--}}
+                            <a href="https://www.aapvr.org.br/jornal-informativo/" target="__blank"><img src="{{ asset('assets/img/icon1.svg') }}" alt=""
                                     width="60px"></a>
                         </div>
                     </div>
@@ -102,16 +103,15 @@
                 <div>
                     <div class="d-flex justify-content-start align-items-start flex-column" style="height: 50px: gap:20px;">
                         <div>
-                            <a style="text-decoration: none; color: #000" href=""><i
-                                    style="color:#000; padding-right: 8px" class="fa-solid fa-envelope"></i>TEL.: (24)
-                                2102-1909</a>
+                            <p style="text-decorption: none; color: #000" class="mb-2" href=""><i
+                                    style="color:#000; padding-right: 8px" class="fa-solid fa-envelope"></i>TEL: (24) 2102-1909</p>
                         </div>
                         <div>
-                            <a style="text-decoration: none; color: #000" href=""><i
+                            <a style="text-decoration: none; color: #000" href="mailto:ouvidoria@aappvr.com.br"><i
                                     style="color:#000; padding-right: 8px"
                                     class="fa-solid fa-phone"></i>ouvidoria@aappvr.com.br</a>
                         </div>
-                        <a href="" class="btn fs-4 px-3 mt-4"
+                        <a href="https://api.whatsapp.com/send/?phone=552421021901&text=Ol%C3%A1%2C+gostaria+de+me+associar%21&type=phone_number&app_absent=0" target="__blank" class="btn fs-4 px-3 mt-4"
                             style="background: #43bf2e; color: #fff; border-radius: 12px"><i
                                 style=" color: #fff; padding-right: 8px" class="fa-brands fa-whatsapp"></i>Whatsapp</a>
                     </div>

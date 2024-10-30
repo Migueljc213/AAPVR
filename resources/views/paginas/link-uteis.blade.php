@@ -38,20 +38,20 @@
                 <div class="col-md-6 pt-4 ">
                     <ul>
                         <li class="pt-4" >
-                            <a class="d-flex align-items-center" href="" style="gap:20px;">
+                            <a class="d-flex align-items-center" href="https://aseapprevs.com.br/" style="gap:20px;">
                                 <img src="{{ asset('assets/img/LogoLinkBlack.svg') }}" alt="">
                                 <p> Associação Eclética de Aposentados e Pensionistas da Previdência Social do Estado de
                                     Minas Gerais (ASEAPPREVS)</p>
                             </a>
                         </li>
                         <li class="pt-4" >
-                            <a class="d-flex align-items-center" href="" style="gap:20px;">
+                            <a class="d-flex align-items-center" href="https://www.gov.br/previdencia/pt-br" style="gap:20px;">
                                 <img src="{{ asset('assets/img/LogoLinkBlack.svg') }}" alt="">
                                 <p> Previdência Social - Aposentadoria</p>
                             </a>
                         </li>
                         <li class="pt-4">
-                            <a class="d-flex align-items-center" href="" style="gap:20px;">
+                            <a class="d-flex align-items-center" href="https://tvtnews.com.br/" style="gap:20px;">
                                 <img src="{{ asset('assets/img/LogoLinkBlack.svg') }}" alt="">
                                 <p> Rede Brasil Atual</p>
                             </a>
@@ -61,19 +61,19 @@
                 <div class="col-md-6 pt-4">
                     <ul>
                         <li class="pt-4">
-                            <a class="d-flex align-items-center" href="" style="gap:20px;">
+                            <a class="d-flex align-items-center" href="https://www.riaam-minas.org.br/" style="gap:20px;">
                                 <img src="{{ asset('assets/img/LogoLinkBlack.svg') }}" alt="">
                                 <p> Rede Ibero-Americana de Associações de Idosos do Estado de Minas Gerais</p>
                             </a>
                         </li>
                         <li class="pt-4">
-                            <a class="d-flex align-items-center" href="" style="gap:20px;">
+                            <a class="d-flex align-items-center" href="https://meu.inss.gov.br/index.html#/login" style="gap:20px;">
                                 <img src="{{ asset('assets/img/LogoLinkBlack.svg') }}" alt="">
                                 <p>Meu Inss - A forma mais fácil de utilizar os serviços do INSS.</p>
                             </a>
                         </li>
                         <li class="pt-4" >
-                            <a class="d-flex align-items-center" href="" style="gap:20px;">
+                            <a class="d-flex align-items-center" href="https://sinttelmg.org.br/" style="gap:20px;">
                                 <img src="{{ asset('assets/img/LogoLinkBlack.svg') }}" alt="">
                                 <p> Sindicato dos Trabalhadores em Telecomunicações de Minas Gerais – Sinttel-MG</p>
                             </a>

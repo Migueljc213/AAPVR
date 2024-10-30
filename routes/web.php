@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\GaleriasController;
 use App\Http\Controllers\Admin\NoticiaController;
 use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\ProfileController;
@@ -80,6 +81,50 @@ Route::get('/projeto-humanizacao', function () {
     return view('paginas.humanizacao');
 })->name('humanizacao');
 
+
+Route::get('/projeto-pacote-office', [PaginasController::class, 'pacoteOffice'])->name('pacote-office');
+
+Route::get('/apostila-titulo-upe-2023-e-2024', function () {
+    return view('paginas.titulo-upe');
+})->name('titulo-upe');
+
+Route::get('/lista-atualizada-de-dirigentes', function () {
+    return view('paginas.governanca');
+})->name('governanca');
+
+Route::get('/portaria', function () {
+    return view('paginas.portaria');
+})->name('portaria');
+
+Route::get('/lgpd', function () {
+    return view('paginas.lgpd');
+})->name('lgpd');
+
+Route::get('/estatuto', function () {
+    return view('paginas.estatuto');
+})->name('estatuto');
+
+Route::get('/balanco-patrimonial', function () {
+    return view('paginas.balanco');
+})->name('balanco');
+
+Route::get('/termos-de-fomento', function () {
+    return view('paginas.termos-fomento');
+})->name('termos-fomento');
+
+
+Route::get('/projeto-ilpi-sorrindo', function () {
+    return view('paginas.ilpi-sorrindo');
+})->name('ilpi-sorrindo');
+
+
+Route::get('/projeto-e-idoso', function () {
+    return view('paginas.e-idoso');
+})->name('e-idoso');
+Route::get('/projeto-educacao-financeira', function () {
+    return view('paginas.educacao-financeira');
+})->name('educacao-financeira');
+
 // Route::middleware('auth', 'user')->prefix('user.')->group(function () {
 //     Route::get('dashboard', [::class, 'index'])->name('index');
 // });
@@ -110,4 +155,10 @@ Route::middleware('auth', 'admin')->group(function () {
     Route::post('admin/banners/{id}',[BannerController::class, 'update'])->name('banners.update');
     Route::get('admin/banners/destroy/{id}',[BannerController::class, 'destroy'])->name('banners.destroy');
  
+    Route::prefix('galeria')->name('galeria.')->controller(GaleriasController::class)->group( function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::post('/novo', 'novo')->name('novo');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
 });

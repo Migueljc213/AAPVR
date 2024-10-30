@@ -49,51 +49,51 @@
                 AAPVR vem sendo reconhecida, seguidamente, como uma grande instituição de utilidade pública. <br> <br>
                 Abaixo, alguns dos títulos e honrarias recebidos pela Associação:</p>
             <ul class="">
-                <li><a href=""> * Titulo de Utilidade pública municipal Volta Redonda desde 18/05/1984 –Lei Municipal
+                <li> href=""> * Titulo de Utilidade pública municipal Volta Redonda desde 18/05/1984 –Lei Municipal
                     1876
                 </a></li>
 
-                <li><a href="">* Título de Utilidade Pública estadual – Moção de Congratulação – Assembleia Legislativa
+                <li>* Título de Utilidade Pública estadual – Moção de Congratulação – Assembleia Legislativa
                     do
                     Estado
                     do Rio de Janeiro – 27/09/1995. </a></li>
 
-                    <li><a href="">* Medalha Tiradentes da ALERJ – autor: Deputado Nelson Gonçalves – 20/05/1998. </a></li>
+                    <li>* Medalha Tiradentes da ALERJ – autor: Deputado Nelson Gonçalves – 20/05/1998.</li>
 
-                <li><a href="">* Diploma de Honra – Polícia Militar do Estado do Rio de Janeiro – 29/02/1996. </a></li>
+                <li>* Diploma de Honra – Polícia Militar do Estado do Rio de Janeiro – 29/02/1996.</li>
 
-                <li><a href="">* Diploma de Agradecimento Rotaract Club Volta Redonda – 26/06/2004. </a></li>
+                <li>* Diploma de Agradecimento Rotaract Club Volta Redonda – 26/06/2004.</li>
 
-                <li><a href="">* Certificado de Agradecimento à Diretoria pelos Funcionários – 19/05/2005 </a></li>
-                <li><a href="">* Placa Parceira da Unimed de Volta Redonda – 14/01/2007. </a></li>
+                <li>* Certificado de Agradecimento à Diretoria pelos Funcionários – 19/05/2005</li>
+                <li>* Placa Parceira da Unimed de Volta Redonda – 14/01/2007.</li>
 
-                <li><a href="">* Medalha pelo 50º aniversário do Instituto Poligrafico da Itália. </a></li>
+                <li>* Medalha pelo 50º aniversário do Instituto Poligrafico da Itália.</li>
 
-                <li><a href="">* Moção de Congratulação Câmara de Volta Redonda – 2003 – 2006 – 2008 (3) – 2010 – 2011 –
+                <li>* Moção de Congratulação Câmara de Volta Redonda – 2003 – 2006 – 2008 (3) – 2010 – 2011 –
                     2022.
-                </a></li>
+            </li>
 
-                <li><a href="">* Medalha Getúlio Vargas de Mérito Legislativo – Câmara Municipal de VR – 01/09/2008. </a></li>
+                <li>* Medalha Getúlio Vargas de Mérito Legislativo – Câmara Municipal de VR – 01/09/2008.</li>
 
-                <li><a href="">* Certificado de Amigo do Grupo Vih-Ver – de ajuda aos portadores do vírus HIV. </a></li>
+                <li>* Certificado de Amigo do Grupo Vih-Ver – de ajuda aos portadores do vírus HIV.</li>
 
-                <li><a href="">* Honra ao Mérito Coopene – 6/5/2009. </a></li>
+                <li>* Honra ao Mérito Coopene – 6/5/2009.</li>
 
-                <li><a href="">* Certificado Reconhecimento Perene Loja Maçônica Independência e Luz II. </a></li>
+                <li>* Certificado Reconhecimento Perene Loja Maçônica Independência e Luz II.</li>
 
-                <li><a href="">* Moção de Congratulações Câmara Municipal de Barra Mansa – 2004 e 2008. </a></li>
+                <li>* Moção de Congratulações Câmara Municipal de Barra Mansa – 2004 e 2008.</li>
 
-                <li><a href="">* Moção de Aplausos da Câmara de Pinheiral – 6/6/2006 – 2009. </a></li>
+                <li>* Moção de Aplausos da Câmara de Pinheiral – 6/6/2006 – 2009.</li>
 
-                <li><a href="">* Certificado Amigo da OAB de Volta Redonda – 25/08/2010. </a></li>
+                <li>* Certificado Amigo da OAB de Volta Redonda – 25/08/2010.</li>
 
-                <li><a href="">* Moção de Aplauso e Louvor – Autor: Deputado Delegado Antonio Furtado – Câmara Federal –
-                    04/05/2022. </a></li>
+                <li>* Moção de Aplauso e Louvor – Autor: Deputado Delegado Antonio Furtado – Câmara Federal –
+                    04/05/2022.</li>
                    
             </ul>
         </div>
         <div class="d-flex justify-content-center" >
-            <a class="px-3 py-2 btn fs-5 fs-md-3 my-3" href="" style="background: var(--cor-secundary); color: #fff; text-transform: uppercase;border-radius: 12px; "><img src="{{asset('assets/img/premio.svg')}}" width="40" alt="" class="mx-3">veja aqui nossos prêmios e títulos</a>
+            <a class="px-3 py-2 btn fs-5 fs-md-3 my-3" href="https://drive.google.com/drive/folders/18M_NdIIUmOZiFEWw7_NGAAkA6d1njBS2" style="background: var(--cor-secundary); color: #fff; text-transform: uppercase;border-radius: 12px; "><img src="{{asset('assets/img/premio.svg')}}" width="40" alt="" class="mx-3">veja aqui nossos prêmios e títulos</a>
         </div>
     </div>
     

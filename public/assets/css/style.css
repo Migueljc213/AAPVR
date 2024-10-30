@@ -59,6 +59,53 @@ a:hover {
     opacity: 1 !important;
 }
 
+#modalNew {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+#modalNew div {
+    background: #fff;
+    margin: 0 auto;
+    min-width: 400px;
+    box-shadow: 0 0 0 10px white;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 12px;
+    padding: 10px
+}
+
+#modalNew div span {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 4px solid white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#modalNew.ativo {
+    display: flex
+}
+
 .link-home:hover div {
     background: linear-gradient(135deg, #ff7700 0%, #ff7700 80%) !important;
     cursor: pointer;
@@ -226,6 +273,188 @@ a:hover {
 
 #modalNew.ativo {
     display: flex
+}
+
+.galeria-modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    left: 0;
+    padding: 4%;
+    cursor: pointer;
+    visibility: hidden;
+    z-index: 100;
+
+}
+
+.galeria-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0);
+    transition: transform 0.25s ease-in-out;
+
+}
+
+.galeria-modal span {
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    font-size: 22px;
+    color: red;
+}
+
+#modal {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+#modal div {
+    background: #fff;
+    margin: 0 auto;
+    min-width: 400px;
+    box-shadow: 0 0 0 10px white;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 12px;
+    padding: 10px
+}
+
+#modal div span {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 4px solid white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.ativo {
+    display: flex !important;
+}
+
+.image-card {
+    position: relative;
+    border: 1px solid #ddd;
+    /* Borda clara */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    overflow: hidden;
+    /* Para esconder bordas de imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    transition: transform 0.3s;
+    /* Efeito ao passar o mouse */
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    /* Aumenta levemente ao passar o mouse */
+}
+
+.image-card img {
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir o espaço */
+    max-height: 150px !important;
+    /* Altura fixa */
+}
+
+.delete-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    /* Remove borda */
+    transition: background 0.3s;
+    /* Efeito ao passar o mouse */
+}
+
+.galeria-modal {
+    height: 100vh; /* Ocupar toda a altura da viewport */
+    width: 100vw; 
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    left: 0;
+    padding: 4%;
+    cursor: pointer;
+    visibility: hidden;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.galeria-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    transform: scale(0);
+    transition: transform 0.25s ease-in-out;
+
+}
+
+.galeria-modal span {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    font-size: 22px;
+    color: red;
+    z-index: 10000;
+}
+
+
+
+.single-galeria img {
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.single-galeria img:hover {
+    transform: scale(1.1) !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 746px) {
+    .galeria {
+        grid-auto-rows: 15vh !important;
+    }
+}
+
+
+.single-galeria img {
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.single-galeria img:hover {
+    transform: scale(1.1) !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 746px) {
+    .galeria {
+        grid-auto-rows: 15vh !important;
+    }
 }
 @media(max-width:1300px) {
     #noticias img {

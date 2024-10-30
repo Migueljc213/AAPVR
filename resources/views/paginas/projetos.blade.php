@@ -45,8 +45,10 @@
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
-                        <img class="projetos_img" src="{{ asset('assets/img/Projetos2.png') }}" width="350"
-                            alt="">
+                        <a href="{{ route('e-idoso') }}">
+                            <img class="projetos_img" src="{{ asset('assets/img/Projetos2.png') }}" width="350"
+                                alt="">
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-xl-4 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
@@ -61,18 +63,24 @@
                 <div class="row my-5">
                     <div class="col-12 col-md-6 col-xl-3 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
-                        <img class="projetos_img" src="{{ asset('assets/img/Projetos4.png') }}" width="250"
-                            alt="">
+                        <a href="{{route('educacao-financeira')}}">
+                            <img class="projetos_img" src="{{ asset('assets/img/Projetos4.png') }}" width="250"
+                                alt="">
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-xl-3 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
-                        <img class="projetos_img" src="{{ asset('assets/img/Projetos5.png') }}" width="250"
-                            alt="">
+                        <a href="{{ route('pacote-office') }}">
+                            <img class="projetos_img" src="{{ asset('assets/img/Projetos5.png') }}" width="250"
+                                alt="">
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-xl-3 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
-                        <img class="projetos_img" src="{{ asset('assets/img/Projetos6.png') }}" width="250"
-                            alt="">
+                        <a href="{{ route('ilpi-sorrindo') }}">
+                            <img class="projetos_img" src="{{ asset('assets/img/Projetos6.png') }}" width="250"
+                                alt="">
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-xl-3 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
