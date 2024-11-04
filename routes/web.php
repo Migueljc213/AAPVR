@@ -4,9 +4,11 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\GaleriasController;
 use App\Http\Controllers\Admin\NoticiaController;
+use App\Http\Controllers\Admin\PasseiosController;
 use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\WorkshopController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', function () {
@@ -21,9 +23,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-Route::get('/',[PaginasController::class, 'home'] )->name('home');
+Route::get('/', [PaginasController::class, 'home'])->name('home');
 
 Route::get('/agenda', function () {
     return view('paginas.agenda-medica');
@@ -83,6 +85,9 @@ Route::get('/projeto-humanizacao', function () {
 
 
 Route::get('/projeto-pacote-office', [PaginasController::class, 'pacoteOffice'])->name('pacote-office');
+Route::get('/projeto-ilpi-sorrindo', [PaginasController::class, 'ilpiSorrindo'])->name('ilpi-sorrindo');
+Route::get('/projeto-educacao-financeira', [PaginasController::class, 'educacaoFinanceira'])->name('educacao-financeira');
+
 
 Route::get('/apostila-titulo-upe-2023-e-2024', function () {
     return view('paginas.titulo-upe');
@@ -113,52 +118,62 @@ Route::get('/termos-de-fomento', function () {
 })->name('termos-fomento');
 
 
-Route::get('/projeto-ilpi-sorrindo', function () {
-    return view('paginas.ilpi-sorrindo');
-})->name('ilpi-sorrindo');
-
 
 Route::get('/projeto-e-idoso', function () {
     return view('paginas.e-idoso');
 })->name('e-idoso');
-Route::get('/projeto-educacao-financeira', function () {
-    return view('paginas.educacao-financeira');
-})->name('educacao-financeira');
+
 
 // Route::middleware('auth', 'user')->prefix('user.')->group(function () {
 //     Route::get('dashboard', [::class, 'index'])->name('index');
 // });
 
 Route::middleware('auth', 'admin')->group(function () {
-    Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
-    
-    Route::get('admin/lista-usuarios',[UserController::class, 'index'])->name('user.index');
-    Route::post('admin/lista-usuarios',[UserController::class, 'store'])->name('user.store');
-    Route::get('admin/lista-usuarios/destroy/{id}',[UserController::class, 'destroy'])->name('user.destroy');    
-    Route::get('admin/lista-usuarios/{id}',[UserController::class, 'edit'])->name('user.edit');    
-    Route::post('admin/lista-usuarios/{id}',[UserController::class, 'update'])->name('user.update');    
+    Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::get('admin/lista-usuarios', [UserController::class, 'index'])->name('user.index');
+    Route::post('admin/lista-usuarios', [UserController::class, 'store'])->name('user.store');
+    Route::get('admin/lista-usuarios/destroy/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+    Route::get('admin/lista-usuarios/{id}', [UserController::class, 'edit'])->name('user.edit');
+    Route::post('admin/lista-usuarios/{id}', [UserController::class, 'update'])->name('user.update');
     Route::patch('/user/{id}/status', [UserController::class, 'updateStatus'])->name('user.updateStatus');
 
-    
+
     /*Noticias */
-    Route::get('admin/noticias',[NoticiaController::class, 'getNoticias'])->name('noticias.index');
-    Route::post('admin/noticias',[NoticiaController::class, 'setNoticias'])->name('noticias.create');
-    Route::get('admin/noticias/{id}',[NoticiaController::class, 'editNoticias'])->name('noticias.edit');
-    Route::post('admin/noticias/{id}',[NoticiaController::class, 'updateNoticias'])->name('noticias.update');
-    Route::get('admin/noticias/destroy/{id}',[NoticiaController::class, 'destroyNoticias'])->name('noticias.destroy');
+    Route::get('admin/noticias', [NoticiaController::class, 'getNoticias'])->name('noticias.index');
+    Route::post('admin/noticias', [NoticiaController::class, 'setNoticias'])->name('noticias.create');
+    Route::get('admin/noticias/{id}', [NoticiaController::class, 'editNoticias'])->name('noticias.edit');
+    Route::post('admin/noticias/{id}', [NoticiaController::class, 'updateNoticias'])->name('noticias.update');
+    Route::get('admin/noticias/destroy/{id}', [NoticiaController::class, 'destroyNoticias'])->name('noticias.destroy');
     /*Noticias */
 
 
-    Route::get('admin/banners',[BannerController::class, 'index'])->name('banners.index');
-    Route::post('admin/banners',[BannerController::class, 'store'])->name('banners.store');
-    Route::get('admin/banners/{id}',[BannerController::class, 'edit'])->name('banners.edit');
-    Route::post('admin/banners/{id}',[BannerController::class, 'update'])->name('banners.update');
-    Route::get('admin/banners/destroy/{id}',[BannerController::class, 'destroy'])->name('banners.destroy');
- 
-    Route::prefix('galeria')->name('galeria.')->controller(GaleriasController::class)->group( function () {
+    Route::get('admin/banners', [BannerController::class, 'index'])->name('banners.index');
+    Route::post('admin/banners', [BannerController::class, 'store'])->name('banners.store');
+    Route::get('admin/banners/{id}', [BannerController::class, 'edit'])->name('banners.edit');
+    Route::post('admin/banners/{id}', [BannerController::class, 'update'])->name('banners.update');
+    Route::get('admin/banners/destroy/{id}', [BannerController::class, 'destroy'])->name('banners.destroy');
+
+    Route::prefix('galeria')->name('galeria.')->controller(GaleriasController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/show/{id}', 'show')->name('show');
         Route::post('/novo', 'novo')->name('novo');
         Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+    Route::prefix('passeios')->name('passeios.')->controller(PasseiosController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/', 'store')->name('create');
+        Route::get('/editar/{id}', 'edit')->name('edit');
+        Route::post('/editar/{id}', 'update')->name('update');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+    });
+
+    Route::prefix('workshops')->name('workshops.')->controller(WorkshopController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/', 'store')->name('create');
+        Route::get('/editar/{id}', 'edit')->name('edit');
+        Route::post('/editar/{id}', 'update')->name('update');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
     });
 });

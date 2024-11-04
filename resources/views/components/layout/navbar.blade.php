@@ -76,7 +76,7 @@
                     </li>
 
 
-                    <li class="nav-item dropdown">
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#navbar-ferramentas" data-bs-toggle="dropdown"
                             data-bs-auto-close="outside" role="button" aria-expanded="false">
                             <span
@@ -106,74 +106,87 @@
                                 </div>
                            
                             </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#navbar-ferramentas" data-bs-toggle="dropdown"
-                            data-bs-auto-close="outside" role="button" aria-expanded="false">
+                    </li> --}}
+                    <li class="nav-item ">
+                        <a class="nav-link d-flex align-items-center " href="{{route('noticias.index')}}">
                             <span
                                 class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path
-                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                                </svg>
+                                <i class="fas fa-newspaper"></i>
                             </span>
                             <span class="nav-link-title">
-                                Pessoas
+                                Notícias
                             </span>
                         </a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-menu-columns">
-                                <div class="dropdown-menu-column">
-                                    <a class="dropdown-item" href="{{ route('user.index') }}">
-                                        usuarios
-                                    </a>
-                                </div>
-                            </div>
+           
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#navbar-ferramentas" data-bs-toggle="dropdown"
-                            data-bs-auto-close="outside" role="button" aria-expanded="false">
+                    <li class="nav-item ">
+                        <a class="nav-link d-flex align-items-center " href="#navbar-ferramentas">
                             <span
                                 class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path
-                                        d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
-                                </svg>
+                                <i class="fas fa-blog"></i>
+                            </span>
+                            <span class="nav-link-title">
+                                Blog
+                            </span>
+                        </a>
+           
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="{{route('user.index')}}">
+                            <span
+                                class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                <i class="fas fa-users"></i>
+                            </span>
+                            <span class="nav-link-title">
+                                Usuários
+                            </span>
+                        </a>
+           
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('galeria.index')}}">
+                            <span
+                                class="nav-link-icon d-md-none d-lg-inline-block">
+                                <i class="fas fa-images"></i>
                             </span>
                             <span class="nav-link-title">
                                 Galerias de Imagens
                             </span>
                         </a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-menu-columns">
-                                <div class="dropdown-menu-column">
-                                    <a class="dropdown-item" href="{{ route('galeria.index') }}">
-                                        Galeria
-                                    </a>
-                                </div>
-                            </div>
+                 
                     </li>
 
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#navbar-ferramentas" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" role="button" aria-expanded="false">
+                            <span
+                                class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                <i class="fas fa-tools"></i>
+                            </span>
+                            <span class="nav-link-title">
+                                Ferramentas
+                            </span>
+                            
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-menu-columns ">
+                                <div class="dropdown-menu-column">
+                                    <a class="text-center dropdown-item my-2 fw-semibold  " href="{{ route('passeios.index') }}">
+                                        Passeios da ILPI Sorrindo
+                                    </a>
+                                    <a class="dropdown-item my-2 fw-semibold" href="{{ route('workshops.index') }}">
+                                        Workshops da Educação Financeira
+                                    </a>
+                                </div>
+                           
+                            </div>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}">
                             <span
                                 class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/mail-opened -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M3 9l9 6l9 -6l-9 -6l-9 6" />
-                                    <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
-                                    <path d="M3 19l6 -6" />
-                                    <path d="M15 13l6 6" />
-                                </svg>
+                                <i class="fas fa-globe"></i>
                             </span>
                             <span class="nav-link-title">
                                 Site
@@ -182,7 +195,7 @@
                     </li>
 
                 </ul>
-                <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+                {{-- <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
                     <form action="./" method="get" autocomplete="off" novalidate>
                         <div class="input-icon">
                             <span class="input-icon-addon">
@@ -199,7 +212,7 @@
                                 aria-label="Search in website">
                         </div>
                     </form>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

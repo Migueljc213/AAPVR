@@ -11,8 +11,7 @@
                         @endforeach
                     @else
                         <div class="card p-4 rounded my-3">
-                            <h2>Não existe nenhuma foto adicionada, clique em Novo para adicionar fotos à
-                                galeria.</h2>
+                            <p>Não existe nenhuma foto adicionada.</p>
                         </div>
                     @endif
                 </div>

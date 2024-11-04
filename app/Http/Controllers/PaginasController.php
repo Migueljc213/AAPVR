@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Banner;
 use App\Models\GaleriaFoto;
 use App\Models\Noticia;
+use App\Models\Passeio;
+use App\Models\Workshop;
 use Illuminate\Http\Request;
 
 class PaginasController extends Controller
@@ -19,5 +21,16 @@ class PaginasController extends Controller
     public function pacoteOffice(){
         $fotos = GaleriaFoto::where('pagina_id', 1)->get();
         return view('paginas.pacote-office', compact('fotos'));
+    }
+
+    public function educacaoFinanceira(){
+        $fotos = GaleriaFoto::where('pagina_id', 3)->get();
+        $workshops = Workshop::orderBy('id', 'desc')->get();
+        return view('paginas.educacao-financeira', compact('fotos','workshops'));
+    }
+    public function ilpiSorrindo(){
+        $fotos = GaleriaFoto::where('pagina_id', 4)->get();
+        $passeios = Passeio::orderBy('id','desc')->get();
+        return view('paginas.ilpi-sorrindo', compact('fotos', 'passeios'));
     }
 }

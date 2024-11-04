@@ -182,55 +182,6 @@
         </div>
     </section>
 
-
-    <style>
-        .galeria-modal {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            background: rgba(0, 0, 0, 0.2);
-            left: 0;
-            padding: 4%;
-            cursor: pointer;
-            visibility: hidden;
-            z-index: 100;
-        }
-
-        .galeria-modal span {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 22px;
-            color: red;
-        }
-
-        .galeria-modal img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transform: scale(0);
-            transition: transform 0.25s ease-in-out;
-        }
-
-        .single-galeria img {
-            transition: transform 0.5s ease-in-out;
-            cursor: pointer;
-        }
-
-        .single-galeria img:hover {
-            transform: scale(1.1) !important;
-            cursor: pointer;
-        }
-
-        @media screen and (max-width: 746px) {
-            .galeria {
-                grid-auto-rows: 15vh !important;
-            }
-        }
-    
-    </style>
-
     <script>
         const galeriaModal = document.querySelector(".galeria-modal")
         const galeriaModalImagem = document.querySelector(".galeria-modal img")

@@ -31,7 +31,7 @@
                         <a href="{{ route('galeria.index') }}" class="btn btn-secondary">Voltar</a>
                         <div class="galeria-modal" onclick="fecharGaleria()">
                             <div class="p-2" style="position: relative" >
-                                <span>X</span>
+                                <span >X</span>
                                 <img src="" alt="">
                             </div>
                         </div>
@@ -42,7 +42,7 @@
 
         <div id="modal" class="modal justify-content-center align-items-center">
             <div>
-                <span class="ClosePacote">X</span>
+                <span class="closeModal">X</span>
 
                 <form action="{{ route('galeria.novo') }}" method="POST" enctype="multipart/form-data">
                     @csrf

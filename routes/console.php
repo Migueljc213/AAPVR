@@ -22,7 +22,8 @@ Artisan::command('avatar', function (){
 
 Artisan::command('tipo', function () {
     PaginasGaleria::create([
-        'href' => 'educacao-financeira',
-        'nome' => 'Projeto educacao-financeira'
+        'href' => 'ilpi-sorrindo',
+        'nome' => 'Projeto ilpi-sorrindo'
     ]);
+    info("Tipo cadastrado");
 });

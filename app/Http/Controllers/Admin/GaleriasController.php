@@ -52,7 +52,7 @@ class GaleriasController extends Controller
         $foto =  GaleriaFoto::findOrfail($id);
         if ($foto) {
             $foto->delete();
-            return view('admin.galerias.galeria')->with('sucess', 'Imagem excluida com sucesso');
+            return redirect()->back()->with('sucess', 'Imagem excluida com sucesso');
         }
     }
 }

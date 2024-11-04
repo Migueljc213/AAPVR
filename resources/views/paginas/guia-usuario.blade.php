@@ -27,8 +27,7 @@
                 </div>
             </div>
             <div>
-                <img class="img-home" src="{{ asset('assets/img/AgendaBannerPessoa.svg') }}" alt=""
-                    style="position: absolute; bottom: 0; right: 80px; height: 90vh; margin-right: 40px">
+               
             </div>
         </div>
     </div>

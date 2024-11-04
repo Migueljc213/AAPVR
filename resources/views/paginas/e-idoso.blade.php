@@ -42,10 +42,10 @@
                     colaborar para a redução da exclusão digital e isolamento social dos idosos, além de propor a troca de
                     conhecimento entre gerações com os instrutores.
                 </p>
-                <button class="btn fw-bold text-uppercase w-100 mt-4 rounded-pill p-2"
+                <a href="https://eidoso.aapvr.com.br/artigo/projeto-e-idoso" target="__blank" class="btn fw-bold text-uppercase w-100 mt-4 rounded-pill p-2"
                     style="background: #ff7700; color: #fff"><i class="fa-solid fa-file-lines px-1"></i>acesse a plataforma
                     e conheça um pouco mais do
-                    projeto</button>
+                    projeto</a>
             </div>
         </div>
     </section>

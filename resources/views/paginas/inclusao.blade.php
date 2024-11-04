@@ -50,9 +50,9 @@
                     condição social, precisamos evitar estar o mais por dentro possível das coisas da internet. O Curso de
                     Inclusão Digital irá facilitar muito a vida dos que participarem.
                 </p>
-                <button class="btn fw-bold text-uppercase w-100 mt-4 rounded-pill p-2"
+                <a href="https://ead.aapvr.com.br/campus" target="__blank" class="btn fw-bold text-uppercase w-100 mt-4 rounded-pill p-2"
                     style="background: #ff7700; color: #fff"><i class="fa-solid fa-file-lines px-1"></i>acesse a plataforma e conheça um pouco mais do
-                    projeto</button>
+                    projeto</a>
             </div>
         </div>
     </section>

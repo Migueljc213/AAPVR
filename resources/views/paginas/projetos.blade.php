@@ -4,11 +4,11 @@
 
 
 @section('content')
-    <section id="projetos" class="d-flex align-items-center justify-content-center justify-content-md-start"
+    <section id="projetos" class="d-flex align-items-center justify-content-center "
         style="background: url({{ asset('assets/img/ProjetosFundo.svg') }}) no-repeat; min-height: 100vh">
-        <div class="container d-flex align-items-center justify-content-center justify-content-md-start" style="gap:20px;">
+        <div class="container d-flex align-items-center justify-content-center " style="gap:20px;">
             <div class="d-flex align-items-center ">
-                <div class="d-flex flex-column justify-content-center justify-content-md-start" style="position: relative;">
+                <div class="d-flex flex-column justify-content-center " style="position: relative;">
                     <img src="{{ asset('assets/img/ProjetosBannerPessoa.svg') }}" alt="" width="600">
 
                     <div class="titulo-banner" style="bottom: 0;left: 10%;">
@@ -63,7 +63,7 @@
                 <div class="row my-5">
                     <div class="col-12 col-md-6 col-xl-3 mb-3 d-flex justify-content-center align-items-center"
                         style="gap:10;position: relative">
-                        <a href="{{route('educacao-financeira')}}">
+                        <a href="{{ route('educacao-financeira') }}">
                             <img class="projetos_img" src="{{ asset('assets/img/Projetos4.png') }}" width="250"
                                 alt="">
                         </a>
@@ -102,15 +102,12 @@
                 Pública Municipal com mais de 49 anos de história. Com uma caminhada de tradição e credibilidade, a AAPVR
                 segue transformando vidas através de Projetos dedicados a assistir e transformar a realidade das pessoas.
                 Oferecendo programas que oportunizam o acesso, o crescimento e a atenção.</p>
-        </div>
-    </article>
-    <section>
-        <div class="container">
-            <div class="p-4 mb-5"
+            <div class="p-4 my-5"
                 style="background: linear-gradient(to right, #0389b7 50%, #2eb8d2); border-radius: 12px; width: 100%;">
                 <img class="logos" src="{{ asset('assets/img/Logos.svg') }}" width="100%" alt="">
             </div>
         </div>
 
-    </section>
+    </article>
+
 @endsection
