@@ -9,6 +9,8 @@ use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WorkshopController;
+use App\Http\Controllers\ComentariosController;
+use App\Models\Comentario;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', function () {
@@ -25,7 +27,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/', [PaginasController::class, 'home'])->name('home');
+
 
 Route::get('/agenda', function () {
     return view('paginas.agenda-medica');
@@ -127,6 +129,14 @@ Route::get('/projeto-e-idoso', function () {
 // Route::middleware('auth', 'user')->prefix('user.')->group(function () {
 //     Route::get('dashboard', [::class, 'index'])->name('index');
 // });
+Route::get('/', [PaginasController::class, 'home'])->name('home');
+Route::get('/noticia/{id}', [PaginasController::class, 'noticiaShow'])->name('noticia.show');
+Route::get('/noticias', [PaginasController::class, 'noticiasIndex'])->name('noticia.index');
+
+
+Route::controller(ComentariosController::class)->prefix('comentarios')->name('comentarios.')->group(function () {
+    Route::post('/comentarios', 'store')->name('store');
+});
 
 Route::middleware('auth', 'admin')->group(function () {
     Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
@@ -145,6 +155,8 @@ Route::middleware('auth', 'admin')->group(function () {
     Route::get('admin/noticias/{id}', [NoticiaController::class, 'editNoticias'])->name('noticias.edit');
     Route::post('admin/noticias/{id}', [NoticiaController::class, 'updateNoticias'])->name('noticias.update');
     Route::get('admin/noticias/destroy/{id}', [NoticiaController::class, 'destroyNoticias'])->name('noticias.destroy');
+    Route::get('admin/noticias/comentarios/{id}', [ComentariosController::class, 'getComentarios'])->name('noticias.comentarios');
+    Route::get('admin/noticias/comentarios/destroy/{id}', [ComentariosController::class, 'destroyComentarios'])->name('noticias.comentarios.destroy');
     /*Noticias */
 
 

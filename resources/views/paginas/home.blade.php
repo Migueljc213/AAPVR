@@ -88,7 +88,7 @@
         style="background: #fff; min-height: 80vh; ">
         <div class="container  flex-wrap">
             <div class="row d-flex align-items-center justify-content-center ">
-                <div class="col-12 col-xl-4 mt-3 text-center text-xl-start" >
+                <div class="col-12 col-xl-4 mt-3 text-center text-xl-start">
                     <h1 class="fw-bold mb-3" style="color: var(--cor-primary)">CONHEÇA O GRUPO APPVR</h1>
                     <p>A AAPVR é uma associação filantrópica e beneficente, que tem como objetivo promover a melhoria da
                         qualidade de vida da população e seus associados, através de assistência social, saúde, educação,
@@ -121,24 +121,26 @@
             <div class="container d-flex justify-content-center align-items-center flex-wrap pb-5"
                 style="gap:30px; background:#49c1e5;">
                 @foreach ($news as $new)
-                    <div style="position: relative">
-                        <img class="object-fit-cover" src="{{ asset($new['img']) }}" alt=""
-                            style="max-width: 300px !important;">
-                        <div
-                            style="position: absolute; bottom: 0;  opacity: 0.5; background-color: #fff; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%; ">
-                        </div>
-                        <div
-                            style="position: absolute; bottom: 0; background: transparent !important;  opacity:1; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%">
-                            <h3 class="fw-bold py-2 px-2 fs-5"
-                                style="color: var(--cor-primary); opacity: 1; background: transparent !important;">
-                                {{ $new['name'] }}
-                            </h3>
-                            <div class="d-flex align-items-end mt-4 mb-0 justify-content-center">
-                                <p class="mb-0" style="color: #000">Saiba mais.
-                                </p>
+                    <a href="{{route('noticia.show' , ['id' => $new['id']])}}">
+                        <div style="position: relative">
+                            <img class="object-fit-cover" src="{{ asset($new['img']) }}" alt=""
+                                style="max-width: 300px !important;">
+                            <div
+                                style="position: absolute; bottom: 0;  opacity: 0.5; background-color: #fff; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%; ">
+                            </div>
+                            <div
+                                style="position: absolute; bottom: 0; background: transparent !important;  opacity:1; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%">
+                                <h3 class="fw-bold py-2 px-2 fs-5"
+                                    style="color: var(--cor-primary); opacity: 1; background: transparent !important;">
+                                    {{ $new['name'] }}
+                                </h3>
+                                <div class="d-flex align-items-end mt-4 mb-0 justify-content-center">
+                                    <p class="mb-0" style="color: #000">Saiba mais.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
                 {{-- <div style="position: relative">
                 <img src="{{ asset('assets/img/NoticiasIdoso2.svg') }}" alt="">

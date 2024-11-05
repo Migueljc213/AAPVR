@@ -88,13 +88,18 @@
                                                         </td>
                                                         <td class="table-action">
                                                             <a href="{{ route('noticias.edit', ['id' => $noticia['id']]) }}"
-                                                                class="btn btn-info btn-sm rounded-2">
+                                                                class="btn btn-info btn-sm rounded-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Editar notícia">
                                                                 <i class="fa-solid fa-gear fa-1x"
                                                                     style="color: #fff"></i>
                                                             </a>
-                                                            <a href="{{ route('noticias.destroy', ['id' => $noticia['id']]) }}"
+                                                            <a href="{{ route('noticias.destroy', ['id' => $noticia['id']]) }}" data-bs-toggle="tooltip" data-bs-placement="right" title="Deletar notícia"
                                                                 class="btn btn-danger btn-sm rounded-2">
                                                                 <i class="fa-solid fa-trash fs-1x"
+                                                                    style="color: #fff"></i>
+                                                            </a>
+                                                            <a href="{{ route('noticias.comentarios', ['id' => $noticia['id']]) }}" data-bs-toggle="tooltip" data-bs-placement="right" title="Ver comentários"
+                                                                class="btn btn-info btn-sm rounded-2">
+                                                                <i class="fas fa-comments"
                                                                     style="color: #fff"></i>
                                                             </a>
 

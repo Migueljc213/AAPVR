@@ -82,4 +82,6 @@ class NoticiaController extends Controller
             return redirect()->route('noticias.index')->with('sucesso', 'Notícia excluida com sucesso!');
         }
     }
+
+    
 }
