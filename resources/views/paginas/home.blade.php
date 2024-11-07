@@ -114,34 +114,41 @@
             <h2>SEJA UM ASSOCIADO</h2>
         </a>
     </article>
-    @if ($news)
-        <article id="noticias" class="d-flex justify-content-center align-items-center flex-column "
+    @if ($news->isNotEmpty())
+        <article id="noticias" class="d-flex justify-content-center align-items-center flex-column text-start"
             style="background: url({{ asset('assets/img/FundoNoticias.svg') }}) no-repeat; min-height:90vh;  height:auto;">
-            <h1 style="color: #fff" class="text-center py-3 fw-light mt-3">NOTÍCIAS</h1>
+            <h1 style="color: #fff" class="text-start  py-3 fw-light mt-3">NOTÍCIAS</h1>
             <div class="container d-flex justify-content-center align-items-center flex-wrap pb-5"
                 style="gap:30px; background:#49c1e5;">
-                @foreach ($news as $new)
-                    <a href="{{route('noticia.show' , ['id' => $new['id']])}}">
-                        <div style="position: relative">
-                            <img class="object-fit-cover" src="{{ asset($new['img']) }}" alt=""
-                                style="max-width: 300px !important;">
-                            <div
-                                style="position: absolute; bottom: 0;  opacity: 0.5; background-color: #fff; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%; ">
+                <div class="row d-flex align-items-start justify-content-center">
+                    @foreach ($news as $new)
+                        <a class="col-12 col-md-4 text-center d-flex justify-content-center flex-column  align-item-end"
+                            style=" text-decoration: none !important"
+                            href="{{ route('noticia.show', ['id' => $new['id']]) }}">
+
+                            <div>
+                                <img class="object-fit-cover" src="{{ asset($new['img']) }}" alt=""
+                                    style="max-width: 400px !important;">
                             </div>
-                            <div
-                                style="position: absolute; bottom: 0; background: transparent !important;  opacity:1; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%">
-                                <h3 class="fw-bold py-2 px-2 fs-5"
-                                    style="color: var(--cor-primary); opacity: 1; background: transparent !important;">
-                                    {{ $new['name'] }}
-                                </h3>
+
+                            <div class="d-flex justify-content-center flex-column text-center mt-3"
+                                style=" bottom: 0; background: transparent !important;  opacity:1; width: 100%; border-radius: 12px; cursor: pointer; padding: 0px 4px;  min-height: 25%">
+                                <div class="d-flex align-items-end mt-2 mb-0 justify-content-center">
+                                    <h3 class="fw-bold px-2 fs-5 text-center"
+                                        style="color: #fff; opacity: 1; background: transparent !important; text-decoration: none !important; max-width: 250px;">
+                                        {{ $new['name'] }}
+
+                                    </h3>
+                                </div>
                                 <div class="d-flex align-items-end mt-4 mb-0 justify-content-center">
-                                    <p class="mb-0" style="color: #000">Saiba mais.
+                                    <p class="mb-0 btn" style="color: #fff; background: var(--cor-secundary)">Saiba mais
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                @endforeach
+
+                        </a>
+                    @endforeach
+                </div>
                 {{-- <div style="position: relative">
                 <img src="{{ asset('assets/img/NoticiasIdoso2.svg') }}" alt="">
                 <div

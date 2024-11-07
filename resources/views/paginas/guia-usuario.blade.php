@@ -87,7 +87,7 @@
                                     width="60px"></a>
                         </div>
                         <div>
-                            <a href="https://www.aapvr.org.br/blog-aap-vr/" target="__blank"><img src="{{ asset('assets/img/icon2.svg') }}" alt=""
+                            <a href="{{route('noticia.index')}}" target="__blank"><img src="{{ asset('assets/img/icon2.svg') }}" alt=""
                                     width="60px"></a>
                                 {{--Blog--}}
                             <a href="https://www.aapvr.org.br/jornal-informativo/" target="__blank"><img src="{{ asset('assets/img/icon1.svg') }}" alt=""

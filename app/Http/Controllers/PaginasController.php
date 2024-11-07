@@ -31,7 +31,7 @@ class PaginasController extends Controller
 
     public function noticiasIndex()
     {
-        $noticias = Noticia::orderBy('id', 'desc')->get();
+        $noticias = Noticia::orderBy('id', 'desc')->paginate(6);
         return view('paginas.noticias', compact('noticias'));
     }
 

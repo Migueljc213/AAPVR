@@ -108,31 +108,32 @@
                             </div>
                     </li> --}}
                     <li class="nav-item ">
-                        <a class="nav-link d-flex align-items-center " href="{{route('noticias.index')}}">
+                        <a class="nav-link d-flex align-items-center " href="{{ route('noticias.index') }}">
                             <span
                                 class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                                <i class="fas fa-newspaper"></i>
-                            </span>
-                            <span class="nav-link-title">
-                                Notícias
-                            </span>
-                        </a>
-           
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link d-flex align-items-center " href="#navbar-ferramentas">
-                            <span
-                                class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
+
                                 <i class="fas fa-blog"></i>
                             </span>
                             <span class="nav-link-title">
                                 Blog
                             </span>
                         </a>
-           
+
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="{{route('user.index')}}">
+                        <a class="nav-link d-flex align-items-center " href="#navbar-ferramentas">
+                            <span
+                                class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                <i class="fas fa-newspaper"></i>
+                            </span>
+                            <span class="nav-link-title">
+                                Jornal
+                            </span>
+                        </a>
+
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="{{ route('user.index') }}">
                             <span
                                 class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
                                 <i class="fas fa-users"></i>
@@ -141,22 +142,21 @@
                                 Usuários
                             </span>
                         </a>
-           
+
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{route('galeria.index')}}">
-                            <span
-                                class="nav-link-icon d-md-none d-lg-inline-block">
+                        <a class="nav-link " href="{{ route('galeria.index') }}">
+                            <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 <i class="fas fa-images"></i>
                             </span>
                             <span class="nav-link-title">
                                 Galerias de Imagens
                             </span>
                         </a>
-                 
+
                     </li>
 
-                     <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#navbar-ferramentas" data-bs-toggle="dropdown"
                             data-bs-auto-close="outside" role="button" aria-expanded="false">
                             <span
@@ -166,19 +166,20 @@
                             <span class="nav-link-title">
                                 Ferramentas
                             </span>
-                            
+
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-columns ">
                                 <div class="dropdown-menu-column">
-                                    <a class="text-center dropdown-item my-2 fw-semibold  " href="{{ route('passeios.index') }}">
+                                    <a class="text-center dropdown-item my-2 fw-semibold  "
+                                        href="{{ route('passeios.index') }}">
                                         Passeios da ILPI Sorrindo
                                     </a>
                                     <a class="dropdown-item my-2 fw-semibold" href="{{ route('workshops.index') }}">
                                         Workshops da Educação Financeira
                                     </a>
                                 </div>
-                           
+
                             </div>
                     </li>
 

@@ -79,8 +79,8 @@
                                                 @foreach ($noticias as $index => $noticia)
                                                     <tr>
                                                         <td>
-                                                            <img src="{{ asset($noticia->img) }}" alt=""
-                                                                width="40" height="40"
+                                                            <img src="{{ asset($noticia->img) }}" alt="" style="max-width: 250px"
+                                                                width="100%" height="100%"
                                                                 style="object-fit: contain">
                                                         </td>
                                                         <td>

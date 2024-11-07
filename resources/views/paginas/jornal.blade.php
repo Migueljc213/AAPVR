@@ -9,57 +9,22 @@
         <div class="container d-flex align-items-center justify-content-center" style="gap:20px;">
             <div class="d-flex align-items-center ">
                 <div class="d-flex flex-column justify-content-center" style="position: relative;">
-                    <img src="{{ asset('assets/img/blogBanner.svg') }}" alt="" width="800">
+                    <img src="{{ asset('assets/img/jornalBanner.svg') }}" alt="" width="800">
 
                     <div class="titulo-banner" style="bottom: 0;left: 10%;">
                         <h3 class=" fw-bold px-3 "
                             style="position: absolute !important; right: 20%; top:85%; font-size: 4rem; color: #fff; background:var(--cor-secundary); text-transform: uppercase ">
-                            BLOG</h3>
+                            Jornal</h3>
                     </div>
 
                 </div>
             </div>
-            <div>
-            </div>
-        </div>
 
-    </section>
-
-    <section>
-
-
-        <div class="container my-5">
-
-            <h1 class="fs-2 fw-bold text-start my-4" style="color: #0389b7; border-bottom: 1px solid #0389b7">Ultimas Notícias</h1>
-            @if ($noticias->isNotEmpty())
-
-                <div class="d-flex justify-content-center align-items-start" >
-                    <div class="d-flex justify-content-center mt-3 align-items-start" style="gap: 30px">
-                        <div>
-                            <img style="width: 500px; height: 300px; object-fit: contain"
-                                src="{{ asset($noticias->first()->img) }}" alt="">
-                        </div>
-
-                        <div class="d-flex justify-content-center flex-column  mt-3">
-
-                            <h2 class="fs-5 fw-bold mt-2 mb-3 " style="color: var(--cor-secundary); max-width: 250px">
-                                {{ $noticias->first()->name }}</h2>
-                            <p class="fs-6 bold mt-2 mb-3 " style="max-width: 250px">
-                                {{ $noticias->first()->description }}</p>
-                            <a href="{{ route('noticia.show', ['id' => $noticias->first()->id]) }}"></a>
-                        </div>
-
-                    </div>
-                </div>
-            @endif
         </div>
 
     </section>
     <section>
-
-
         <div class="container my-5">
-
             <h1 class="fs-2 fw-bold text-start my-4" style="color: #0389b7; border-bottom: 1px solid #0389b7">Destaque</h1>
             @if ($noticias->isNotEmpty())
                 <div class="row d-flex justify-content-center align-items-center">
@@ -83,11 +48,8 @@
                         </div>
                     @endforeach
                 </div>
-
-
             @endif
         </div>
-
     </section>
 
 @endsection
